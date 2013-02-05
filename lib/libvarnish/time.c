@@ -161,6 +161,9 @@ TIM_sleep(double t)
 #ifdef HAVE_NANOSLEEP
 	struct timespec ts;
 
+	if (t <= 0.0)
+	  return;
+
 	ts = TIM_timespec(t);
 
 	(void)nanosleep(&ts, NULL);

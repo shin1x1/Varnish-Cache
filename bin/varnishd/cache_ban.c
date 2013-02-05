@@ -908,7 +908,7 @@ ban_lurker(struct sess *sp, void *priv)
 	(void)priv;
 	while (1) {
 
-		while (params->ban_lurker_sleep == 0.0) {
+		while (params->ban_lurker_sleep < 0.0) {
 			/*
 			 * Ban-lurker is disabled:
 			 * Clean the last ban, if possible, and sleep

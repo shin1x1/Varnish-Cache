@@ -854,11 +854,11 @@ static const struct parspec input_parspec[] = {
 		0,
 		"on", "bool" },
 	{ "ban_lurker_sleep", tweak_timeout_double,
-		&master.ban_lurker_sleep, 0, UINT_MAX,
+		&master.ban_lurker_sleep, -1, UINT_MAX,
 		"How long time does the ban lurker thread sleeps between "
 		"successful attempts to push the last item up the ban "
 		" list.  It always sleeps a second when nothing can be done.\n"
-		"A value of zero disables the ban lurker.",
+		"A value of -1 disables the ban lurker.",
 		0,
 		"0.01", "s" },
 	{ "saintmode_threshold", tweak_uint,
